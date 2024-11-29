@@ -1,0 +1,180 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a60321;
+    color: white;
+}
+#perguntas{
+    border: white 2px solid;
+    padding: 30px;
+    margin: 5px;
+    width: 600px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    background-color: #006F57;
+}
+#pergunta{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+#imagem_coquette{
+    width: 50vh;
+    height: 40vh;
+    background-image: url(https://s1.static.brasilescola.uol.com.br/be/conteudo/images/a-figura-papai-noel-tem-origem-historica-em-sao-nicolau-santo-catolico-em-odin-divindade-mitologia-nordica-5c13768d39e9b.jpg);
+    background-size: 100% 100%;
+    border: white 2px solid;
+    border-radius: 13px;
+}
+#imagem_frozi{
+    width: 50vh;
+    height: 40vh;
+    background-image: url(https://cdn.brasildefato.com.br/media/6dd0dc43ef525600922219e0837f2ed6.jpg);
+    background-size: 100% 100%;
+    border: white 2px solid;
+    border-radius: 13px;
+}
+#imagem_branca{
+    width: 50vh;
+    height: 40vh;
+    background-image: url(https://i.ytimg.com/vi/WPNCR5qUXyk/maxresdefault.jpg);
+    background-size: 100% 100%;
+    border: white 2px solid;
+    border-radius: 13px;
+}
+#imagem_venellope{
+    width: 50vh;
+    height: 40vh;
+    background-image: url(https://congesa.com.br/wp-content/uploads/blogjg/papai-noel.jpg);
+    background-size: 100% 100%;
+    border: white 2px solid;
+    border-radius: 13px;
+}
+#imagem_venellope1{
+    width: 50vh;
+    height: 40vh;
+    background-image: url(https://cdn.awsli.com.br/600x700/2515/2515351/produto/185542955/4resultado-lh27nunoep.png);
+    background-size: 100% 100%;
+    border: white 2px solid;
+    border-radius: 13px;
+}
+label{
+    font-size: 23px;
+}
+#resultadoFinal{
+    font-size: 40px;
+    text-align: center;
+}
+#imagem_venellope:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: 5s;
+    animation: rotate 3s linear;
+    background-image: url(https://images.everyeye.it/img-notizie/dragon-ball-z-3-cose-rendono-future-gohan-personaggio-tragico-v3-751164-1200x1200.webp);
+}
+#imagem_coquette:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: 5s;
+    animation: rotate 3s linear;
+    background-image: url(https://sm.ign.com/ign_br/screenshot/default/guerreiros-z_jj55.jpg);
+}
+#imagem_frozi:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: 5s;
+    animation: rotate 3s linear;
+    background-image: url(https://pm1.aminoapps.com/6458/172b5284d7e001845c70834898a9656cebae3e54_hq.jpg);
+}
+#imagem_branca:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: 5s;
+    animation: rotate 3s linear;
+    background-image: url(https://imagedelivery.net/LBWXYQ-XnKSYxbZ-NuYGqQ/c462ef4c-a46e-4b67-9d38-52174d595500/banner);
+}
+@keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+@media(max-width: 850px){
+    html{font-size: 16px;}
+}
+@media(max-width: 450px){
+    html{font-size: 10px;}
+}
+.roblox {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.roblox:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.roblox:active {
+    color: #000
+}
+
+.roblox:active:after {
+    background: transparent;
+}
+
+.roblox:before {
+    opacity: 1;
+}
+
+.roblox:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+#imagem_r{
+    width: 50vh;
+    height: 40vh;
+    background-size: 100% 100%;
+    border-radius: 13px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="perguntas">
+        <h1 id="nomeSegunda"></h1>
+        <h1>Por favor responda as perguntas!</h1>
+    <script>
+        let h1 = document.getElementById("nomeSegunda")
+        let nome = localStorage.getItem("nomeSalvo")
+        h1.innerHTML = nome
+    </script>
+    <script src="script.js"></script>
+        <div id="pergunta">
+            <h1>Qual sua cor favorita?</h1>
+            <div id="imagem_coquette"></div>
+            <label> <input type="radio" name="p1" class="radio" value="bela">Vermelho escuro</label>
+            <label> <input type="radio" name="p1" class="radio" value="branca">Vermelho</label>
+            <label> <input type="radio" name="p1" class="radio" value="frozen">Red</label>
+            <label> <input type="radio" name="p1" class="radio" value="vanellope">Dark Red</label>
+        </div>
+        <div id="pergunta">
+            <h1>Qual sua comida natalina favorita?</h1>
+            <div id="imagem_frozi"></div>
+            <label> <input type="radio" name="p2" class="radio" value="bela">Panetone</label>
+            <label> <input type="radio" name="p2" class="radio" value="branca">Frango assado</label>
+            <label> <input type="radio" name="p2" class="radio" value="frozen">Pavê</label>
+            <label> <input type="radio" name="p2" class="radio" value="vanellope">Churrasco</label>
+        </div>
+        <div id="pergunta">
+            <h1>Qual seu personagem favorito do natal?</h1>
+            <div id="imagem_branca"></div>
+            <label> <input type="radio" name="p3" class="radio" value="bela">Rena</label>
+            <label> <input type="radio" name="p3" class="radio" value="branca">Grinch</label>
+            <label> <input type="radio" name="p3" class="radio" value="frozen">Jesus</label>
+            <label> <input type="radio" name="p3" class="radio" value="vanellope">Krampus</label>
+        </div>
+        <div id="pergunta">
+            <h1>Quem você acha que ganha no soco?</h1>
+            <div id="imagem_venellope"></div>
+            <label> <input type="radio" name="p4" class="radio" value="bela">Papai Noel</label>
+            <label> <input type="radio" name="p4" class="radio" value="branca">Grinch</label>
+            <label> <input type="radio" name="p4" class="radio" value="frozen">Jesus</label>
+            <label> <input type="radio" name="p4" class="radio" value="vanellope">Krampus</label>
+        </div>
+        <div id="pergunta">
+            <h1>Qual presente tu gostaria de ganhar?</h1>
+            <div id="imagem_venellope1"></div>
+            <label> <input type="radio" name="p5" class="radio" value="bela">Max Steel boneco inflavel</label>
+            <label> <input type="radio" name="p5" class="radio" value="branca">PC gamer</label>
+            <label> <input type="radio" name="p5" class="radio" value="frozen">Camiseta a escolha</label>
+            <label> <input type="radio" name="p5" class="radio" value="vanellope">Acidente de carro</label>
+        </div>
+        <br>
+        <br>
+        <button class="roblox" onclick="ContarVotos()">Veja qual papai noel tu é!!!!</button>
+        <br>
+        <br>
+        <h1 id="resultadoFinal"></h1>
+        <div id="imagem_r"></div>
+    </div>
+    <script>
+        function ContarVotos(){
+            //criando contadores
+            let contBela = 0;
+            let ContBranca = 0;
+            let ContFrozen = 0;
+            let ContVanellope = 0;
+
+            //obter is radios da classe radios
+            let radio = document.getElementsByClassName('radio')
+
+            //percorrendo todos os elementos redios
+            for(let i=0; i < radio.length; i++){
+                //testar qual radio esta selecionado
+                if(radio[i].checked){
+                    if(radio[i].value == "bela"){
+                        contBela++
+                    }else if(radio[i].value == "branca"){
+                        ContBranca++
+                    } else if(radio[i].value == "frozen"){
+                        ContFrozen++
+                    }else{
+                        ContVanellope++
+                    }
+                }
+            }
+            
+            let resultado = document.getElementById('resultadoFinal')
+            let img  = document.getElementById('imagem_r')
+            if (contBela > ContBranca && contBela > ContFrozen && contBela > ContVanellope){
+                resultado.innerHTML = "Você é o papai noel legal!!!!"
+                img.style.backgroundImage = 'url(https://m.media-amazon.com/images/I/910uwXcHF7L.jpg)'
+            } else if(ContBranca > ContFrozen && ContBranca > ContVanellope){
+                resultado.innerHTML = "Você é o papai noel gigachad!!!!"
+                img.style.backgroundImage = 'url(https://preview.redd.it/merry-christmas-sd-community-heres-a-small-collection-of-v0-gevolvd33z7a1.jpg?width=640&crop=smart&auto=webp&s=b32bd9644ddca6da110e7def01682b852d891da4)'
+            } else if(ContFrozen > ContVanellope){
+                resultado.innerHTML = "Você é o papai noel cristão!!!!"
+                img.style.backgroundImage = 'url(https://www.nuvemcatolica.com.br/wp-content/uploads/2017/12/papai-noel-diante-do-menino-jesus-na-manjedoura.jpg)'
+            } else{
+                resultado.innerHTML = "Você é o papai noel maligno!!!!"
+                img.style.backgroundImage = 'url(https://play-lh.googleusercontent.com/auTYdBTqes3pfpoMC8RJO66amJIV8WDKQx_NMNjteU05Z94pzR78kKwxQ-H45rv1yw=w240-h480-rw)'
+            } 
+        }
+    </script>
+</body>
+</html>
